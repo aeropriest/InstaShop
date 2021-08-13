@@ -2,6 +2,8 @@ import { render } from '@testing-library/react';
 import { Component } from 'react';
 import './sign-in.styles.scss'
 import FormInput from '../form-input/form-input.component'
+import CustomButton from '../custom-button/custom-button.component'
+
 
 class SignIn extends Component{
     constructor(props){
@@ -12,7 +14,6 @@ class SignIn extends Component{
             password: ''
         }
     }
-
 
     handleSubmit = event => {
         event.preventDefault()
@@ -30,26 +31,27 @@ class SignIn extends Component{
                 <h2>I already have an account</h2>
                 <span>Sign in with your email and password</span>
                 <form onSubmit={this.handleSubmit}>
-                    <FormInput 
-                        name="email" 
-                        type='email' 
-                        value={this.state.email} rquired 
-                        onChange={this.handleOnChange}
-                        />
-                    <FormInput 
-                        name="password" 
-                        type = 'password' 
-                        value={this.state.password} rquired 
-                        onChange={this.handleOnChange}
-                        />
-                    <input type="submit" value = "Submit From"/>
+                    <FormInput
+                        name='email'
+                        type='email'
+                        handleChange={this.handleChange}
+                        value={this.state.email}
+                        label='email'
+                        required
+                    />
+                    <FormInput
+                        name='password'
+                        type='password'
+                        value={this.state.password}
+                        handleChange={this.handleChange}
+                        label='password'
+                        required
+                    />
+                    <CustomButton type="submit">Sign In</CustomButton>
                 </form>
             </div>
         )
     }    
 }
-    
-
-
 
 export default SignIn
