@@ -5,9 +5,6 @@ const INITIAL_STATE = {
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
-    console.log('user reducer was called')
-    console.log(action.type)
-    console.log(action.payload)
     switch(action.type){
         case UserActionTypes.SET_CURRENT_USER:
             return {
