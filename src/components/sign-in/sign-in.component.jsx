@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import { Component } from 'react';
 import './sign-in.styles.scss'
 import FormInput from '../form-input/form-input.component'
@@ -35,17 +34,17 @@ class SignIn extends Component{
                     <FormInput
                         name='email'
                         type='email'
-                        onChange={this.handleChange}
                         value={this.state.email}
                         label='email'
+                        onChange={this.handleOnChange}
                         required
                     />
                     <FormInput
                         name='password'
                         type='password'
-                        value={this.state.password}
-                        onChange={this.handleChange}
+                        value={this.state.password}                        
                         label='password'
+                        onChange={this.handleOnChange}
                         required
                     />
                     <div className='buttons'>
@@ -57,5 +56,6 @@ class SignIn extends Component{
         )
     }    
 }
+
 
 export default SignIn
