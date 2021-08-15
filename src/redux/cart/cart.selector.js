@@ -1,15 +1,15 @@
 import { createSelector } from 'reselect';
 
-const selectCart = state => state.cart;
+const selectCart = state => state.cart
 
 export const selectCartItems = createSelector(
     [selectCart],
     cart => cart.cartItems
 )
 
-export const selectCartItemsCount = createStructuredSelector(
+export const selectCartItemsCount = createSelector(
     [selectCartItems],
-    cartItem =>
+    cartItems =>
         cartItems.reduce(
             (accQty, cartItem) => accQty + cartItem.quantity,
             0)
