@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component }  from 'react';
 import SHOP_DATA from './shop.data.js'
 
 import '../../components/preview-collection/collection-preview.component'
