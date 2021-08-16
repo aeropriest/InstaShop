@@ -2,7 +2,6 @@ import './checkout-item.styles.scss'
 
 import { connect } from 'react-redux'
 import { clearItemFromCart, addItem, removeItem } from '../../redux/cart/cart.actions'
-import CartItem from '../cart-item/cart-item.component'
 
 const CheckoutItem = ({ item, clearItem, addItem, removeItem }) => {
     const { imageUrl, name, price, quantity } = item
