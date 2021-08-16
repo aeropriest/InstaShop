@@ -5,7 +5,9 @@
     margin-bottom: 15px;
   
     img {
-      width: 30%;
+      max-width:30%;
+      width: auto;
+      height: auto;
     }
   
     .item-details {

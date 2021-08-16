@@ -7,7 +7,9 @@ import CartItem from '../cart-item/cart-item.component'
 
 import { selectCartItems } from '../../redux/cart/cart.selector'
 
-const CartDropdown = ({ cartItems }) => {
+import { withRouter } from 'react-router'
+
+const CartDropdown = ({ cartItems, history }) => {
     return(
     <div className="cart-dropdown">
         <div className="cart-items">
@@ -17,7 +19,7 @@ const CartDropdown = ({ cartItems }) => {
                 :  <span className='empty-message'> Empty Cart </span>                 
             }
         </div>
-        <CustomButton>CHECKOUT</CustomButton>
+        <CustomButton onClick={()=>history.push('/checkout')}>CHECKOUT NOW</CustomButton>
     </div>
     )
 }
@@ -28,4 +30,4 @@ const mapStateToProps = (state) => ({
     cartItems : selectCartItems(state)
 })
 
-export default connect(mapStateToProps, null)(CartDropdown)
+export default  withRouter(connect(mapStateToProps, null)(CartDropdown))
