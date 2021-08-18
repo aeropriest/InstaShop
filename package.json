@@ -20,7 +20,8 @@
     "reselect": "^4.0.0",
     "sass": "^1.38.0",
     "scss": "^0.2.4",
-    "selector": "^2.0.20"
+    "selector": "^2.0.20",
+    "styled-components": "^5.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
