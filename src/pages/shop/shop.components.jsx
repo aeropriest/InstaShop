@@ -12,5 +12,4 @@ const ShopPage = ({match, param}) => {
     </div>
     )
 }
-
 export default ShopPage
