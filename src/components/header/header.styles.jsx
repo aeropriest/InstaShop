@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled  from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.div`
@@ -15,10 +15,6 @@ export const LogoContainer = styled(Link)`
     padding: 25px;
 `
 
-const OptionsContainerStyles = css`
-    padding: 10px 15px;
-    cursor: pointer;
-`
 
 export const OptionsContainer = styled.div`
     width: 50%;
@@ -29,9 +25,6 @@ export const OptionsContainer = styled.div`
 `
 
 export const OptionsLink = styled(Link)`
-    ${OptionsContainerStyles}
-`
-
-export const OptionsDiv = styled.div`
-    ${OptionsContainerStyles}
+    padding: 10px 15px;
+    cursor: pointer;
 `
