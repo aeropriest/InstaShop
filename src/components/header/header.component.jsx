@@ -6,7 +6,6 @@ import CartIcon from '../../components/cart-icon/cart-icon.component'
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component'
 import {auth} from './../../firebase/firebase.utils'
 
-//import './header.styles.scss'
 import { HeaderContainer, LogoContainer, OptionsContainer, OptionsDiv, OptionsLink } from './header.styles'
 
 
@@ -27,9 +26,9 @@ const Header = ({currentUser, hidden}) => (
                 SIGN OUT
                 </OptionsDiv>
             ) : (
-                <Link className='option' to='/signin'>
+                <OptionsLink to='/signin'>
                 SIGN IN
-                </Link>
+                </OptionsLink>
             )}
             <CartIcon/>
         </OptionsContainer>  
