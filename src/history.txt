@@ -1,0 +1,95 @@
+########################
+GIT from instrucgure
+#############
+https://github.com/zhangmyihua
+Git clone lesson
+Git remote
+Git remote remove origin
+Git remote add origin <add the SSH key from your repo here>
+Git push
+Git branch -a
+Npm install
+
+##################
+install NVM
+#####################
+https://github.com/nvm-sh/nvm#installation-and-update
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+command -v nvm
+nano ~/.bash_profile
+source ~/.bash_profile
+cat ~/.bash_profile
+nvm -v
+
+###################
+install node
+#######################
+nvm install node
+node -v
+npm -v
+
+####################
+install yarn
+#####################
+https://classic.yarnpkg.com/en/docs/install/#mac-stable
+npm install --global yarn
+yarn -v
+
+
+####################
+yarn equivalent of npm
+###################
+Install dependencies from package.json: npm install == yarn
+
+
+Install a package and add to package.json: npm install package --save == yarn add package
+
+
+Install a devDependency to package.json: npm install package --save-dev == yarn add package --dev
+
+
+
+Remove a dependency from package.json: npm uninstall package --save == yarn remove package
+
+
+
+Upgrade a package to its latest version: npm update --save == yarn upgrade
+
+
+
+Install a package globally: npm install package -g == yarn global add package
+
+########################
+create react app installer
+#########################
+npx create-react-app
+
+####################
+react developer add on
+######################
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=en
+
+
+########################
+deploying on git
+########################
+ssh-keygen -t rsa -b 4096 -C "ashok.jaiswal@gmail.com"
+git remote add origin git@github.com:aeropriest/ramayna-rolodex.git
+yarn add gh-pages
+yarn deploy
+
+"homepage": "https://aeropriest.github.io/ramayana-rolodex"
+
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+https://github.com/gitname/react-gh-pages
+
+#########################
+heroku setup
+##########################
+
+heroku create insta-shop-888 --buildpack https://github.com/mars/create-react-app-buildpack.git
+
+https://insta-shop-888.herokuapp.com/ | https://git.heroku.com/insta-shop-888.git
+
+git push heroku main:main
