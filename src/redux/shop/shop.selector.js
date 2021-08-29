@@ -3,16 +3,19 @@ import memoize from 'lodash.memoize';
 
 const selectShop = state => state.shop
 
+export const selectIsCollectionFetching = createSelector(
+  [selectShop],
+  shop => shop.isFetching
+)
+
 export const selectCollections = createSelector(
     [selectShop],
     shop => shop.collections
 )
-
   export const selectCollectionsForPreview = createSelector(
     [selectCollections],
-    collections => Object.keys(collections).map(key => collections[key])
-  );
-
+    collections => collections ? Object.keys(collections).map(key => collections[key]) : []
+  )
 
   export const selectCollection = memoize((collectionUrlParam) => {
     console.log('---------------------selecor')
@@ -20,8 +23,12 @@ export const selectCollections = createSelector(
     return(
       createSelector(
         [selectCollections],
-        collections =>
-        collections[collectionUrlParam]
+        collections => collections ? collections[collectionUrlParam] : null
       )
     )
   })
+
+export const selectIsCollectionLoaded = createSelector(
+  [selectShop],
+  shop => !!shop.collections
+)
