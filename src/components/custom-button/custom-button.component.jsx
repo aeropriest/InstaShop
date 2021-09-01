@@ -16,6 +16,6 @@ const CustomButton = ({
   >
     {children}
   </button>
-);
+)
 
-export default CustomButton;
+export default CustomButton

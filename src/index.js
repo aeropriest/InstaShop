@@ -22,4 +22,4 @@ ReactDOM.render(
       </Provider>
     </CartProvider>,
     document.getElementById('root')
-);
+)
