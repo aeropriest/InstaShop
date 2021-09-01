@@ -1,9 +1,5 @@
 import { useContext } from 'react'
-import { createStructuredSelector } from 'reselect'
 import DirectoryContext from '../../context/directory/directory.context'
-
-import { selectDirectorySections } from '../../redux/directory/directory.selectors'
-
 import MenuItem from '../menu-item/menu-item.component'
 
 import './directory.styles.scss'
