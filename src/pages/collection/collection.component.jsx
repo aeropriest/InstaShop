@@ -1,9 +1,9 @@
-import { useContext } from 'react';
-import CollectionsContext from '../../context/collections/collection.context';
+import { useContext } from 'react'
+import CollectionsContext from '../../context/collections/collection.context'
 
-import CollectionItem from '../../components/collection-item/collection-item.component';
+import CollectionItem from '../../components/collection-item/collection-item.component'
 
-import './collection.styles.scss';
+import './collection.styles.scss'
 
 const CollectionPage = ({ match }) => {
   const collections = useContext(CollectionsContext)
